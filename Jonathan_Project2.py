@@ -6,6 +6,7 @@ import time
 #-----------------------------------
 #This is the form that gathers user input
 
+st.image("cortana.jpg",width=100)
 st.title("Input to AI")
 
 file = st.file_uploader("Upload attachment:")
