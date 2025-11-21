@@ -10,8 +10,8 @@ st.title("Input to AI")
 
 file = st.file_uploader("Upload attachment:")
 question = st.text_input("Enter your question:")
-llm_type = st.radio("Select LLM: ", ["Llama","Gemini","ChatGPT (requires key)"])
-if llm_type == "ChatGPT" or llm_type == "Gemini":
+llm_type = st.radio("Select LLM: ", ["Llama","Gemini (requires key)","ChatGPT (requires key)"])
+if llm_type in ["ChatGPT (requires key)","Gemini (requires key)"]:
 	key = st.text_input("Key please")
 abbreviation_index = st.radio("Include abbreviation index: ", ["No","Yes"])
 if abbreviation_index == "Yes":
