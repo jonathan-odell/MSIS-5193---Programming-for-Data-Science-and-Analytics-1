@@ -45,6 +45,7 @@ if st.button("Submit"):
 
 	#This adds instructions and the question to the prompt
 	prompt += "\nPlease answer the users question below using anything above as context."
+	prompt += "\nIf there is nothing above then just focus on the question."
 	prompt += f"\n{question}"
 
 	#This add more instructions if abbreviation index option was selected
