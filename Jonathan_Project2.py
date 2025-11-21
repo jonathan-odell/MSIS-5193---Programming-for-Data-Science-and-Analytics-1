@@ -1,5 +1,4 @@
 import streamlit as st
-#from langchain_ollama import ChatOllama
 from pdfminer.high_level import extract_text
 import time
 
@@ -12,6 +11,7 @@ st.title("Input to AI")
 file = st.file_uploader("Upload attachment:")
 question = st.text_input("Enter your question:")
 llm_type = st.radio("Select LLM: ", ["Llama","Gemini (requires key)","ChatGPT (requires key)"])
+#Depending on the LLM, an additional text box will pop up for a key
 if llm_type in ["ChatGPT (requires key)","Gemini (requires key)"]:
 	key = st.text_input("Key please")
 abbreviation_index = st.radio("Include abbreviation index: ", ["No","Yes"])
